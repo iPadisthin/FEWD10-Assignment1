@@ -20,6 +20,10 @@ body {
     background: #F6F6F6;
 
 }
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
 /* typography */
 a {
@@ -94,9 +98,10 @@ hr {
 /* layout and components */
 
 div.site-title {
-    position: relative;
+    position: relative; /* required to make this reference for span absolute positioning */
+    
     width: 100%;
-    height: 300px;
+    height: 18.75em; /* 300px */
     
     /* Dracula from http://uigradients.com/ */
     background: #DC2424; /* fallback for old browsers */
@@ -115,16 +120,15 @@ div.site-title span {
     display: block;
     height: 1em;
     
+    /* absolute centering */
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    
     margin: auto;
     
-    
-    /* long shadow */
+    /* long text shadow */
     text-shadow: rgb(0, 0, 0) 1px 1px,
     rgb(0, 0, 0) 2px 2px,
     rgb(0, 0, 0) 3px 3px,
@@ -140,6 +144,8 @@ div.site-title span {
     /* use pulse animation */
     animation: pulse 0.5s 20;
 }
+
+/* navigation */
 nav {
     
     color: #222222;
@@ -152,7 +158,7 @@ ul.social {
 }
 nav li,
 ul.social li {
-    display: inline-block;
+    display: inline;
     padding: 0 10px;
     color: #ddd;
     border-right: 1px solid #222222;
@@ -161,13 +167,6 @@ nav li:last-child,
 ul.social li:last-child {
     border-right: 0;
 }
-
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-
 
 img {
   /*float: right;*/
